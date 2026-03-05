@@ -36,20 +36,3 @@ export async function signInWithMagicLink(formData: FormData) {
 
   redirect("/login?message=Check+your+email");
 }
-
-export async function signInWithGoogle() {
-  const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
-    },
-  });
-
-  if (error) {
-    redirect("/login?error=Could+not+sign+in+with+Google");
-  }
-
-  redirect(data.url);
-}

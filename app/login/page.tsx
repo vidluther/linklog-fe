@@ -2,17 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import {
-  signInWithPassword,
-  signInWithMagicLink,
-  signInWithGoogle,
-} from "./actions";
+import { signInWithPassword, signInWithMagicLink } from "./actions";
 
-export default function LoginPage({
+export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: { error?: string; message?: string };
+  searchParams: Promise<{ error?: string; message?: string }>;
 }) {
+  const { error, message } = await searchParams;
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-sm space-y-6 p-8">
@@ -75,13 +72,6 @@ export default function LoginPage({
         </form>
 
         <Separator />
-
-        {/* Google OAuth */}
-        <form action={signInWithGoogle}>
-          <Button type="submit" variant="outline" className="w-full">
-            Continue with Google
-          </Button>
-        </form>
       </div>
     </div>
   );
