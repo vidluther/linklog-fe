@@ -4,12 +4,10 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { signInWithPassword, signInWithMagicLink } from "./actions";
 
-export default async function LoginPage({
-  searchParams,
-}: {
+export default async function LoginPage(props: {
   searchParams: Promise<{ error?: string; message?: string }>;
 }) {
-  const { error, message } = await searchParams;
+  const { error, message } = await props.searchParams;
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-sm space-y-6 p-8">
@@ -20,15 +18,11 @@ export default async function LoginPage({
           </p>
         </div>
 
-        {searchParams.error && (
-          <p className="text-sm text-destructive text-center">
-            {searchParams.error}
-          </p>
+        {error && (
+          <p className="text-sm text-destructive text-center">{error}</p>
         )}
-        {searchParams.message && (
-          <p className="text-sm text-muted-foreground text-center">
-            {searchParams.message}
-          </p>
+        {message && (
+          <p className="text-sm text-muted-foreground text-center">{message}</p>
         )}
 
         {/* Email + Password */}
