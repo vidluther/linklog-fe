@@ -19,20 +19,3 @@ export async function signInWithPassword(formData: FormData) {
   revalidatePath("/", "layout");
   redirect("/dashboard");
 }
-
-export async function signInWithMagicLink(formData: FormData) {
-  const supabase = await createClient();
-
-  const { error } = await supabase.auth.signInWithOtp({
-    email: formData.get("email") as string,
-    options: {
-      emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
-    },
-  });
-
-  if (error) {
-    redirect("/login?error=Could+not+send+magic+link");
-  }
-
-  redirect("/login?message=Check+your+email");
-}

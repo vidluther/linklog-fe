@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { signInWithPassword, signInWithMagicLink } from "./actions";
+import { signInWithPassword } from "./actions";
 
 export default async function LoginPage(props: {
   searchParams: Promise<{ error?: string; message?: string }>;
@@ -43,25 +43,6 @@ export default async function LoginPage(props: {
           </div>
           <Button type="submit" className="w-full">
             Sign in
-          </Button>
-        </form>
-
-        <Separator />
-
-        {/* Magic Link */}
-        <form action={signInWithMagicLink} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="magic-email">Email</Label>
-            <Input
-              id="magic-email"
-              name="email"
-              type="email"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-          <Button type="submit" variant="outline" className="w-full">
-            Send magic link
           </Button>
         </form>
 
