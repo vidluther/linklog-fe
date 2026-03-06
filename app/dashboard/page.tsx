@@ -9,5 +9,5 @@ export default async function DashboardPage() {
 
   if (!user) redirect("/login");
 
-  return <pre>You are {user.email}</pre>;
+  return <pre>You are logged in as {user.email}</pre>;
 }
