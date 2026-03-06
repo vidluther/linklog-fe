@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "account_id": "c9c9c2e25d79cb88d2473d01b910d8f8",
   "main": ".open-next/worker.js",
-  "name": "wwwlinklogapp",
+  "name": "linklog-fe",
   "compatibility_date": "2026-03-05",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
@@ -14,7 +14,7 @@
       // Self-reference service binding, the service name must match the worker name
       // see https://opennext.js.org/cloudflare/caching
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "wwwlinklogapp",
+      "service": "linklog-fe",
     },
   ],
   "r2_buckets": [
@@ -25,7 +25,7 @@
       // Create the bucket before deploying
       // You can change the bucket name if you want
       // See https://developers.cloudflare.com/workers/wrangler/commands/#r2-bucket-create
-      "bucket_name": "wwwlinklogapp-opennext-cache",
+      "bucket_name": "linklog-fe-opennext-cache",
     },
   ],
   "images": {
