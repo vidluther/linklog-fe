@@ -52,16 +52,16 @@ importers:
         version: 1.4.0
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: ^4.2.1
         version: 4.2.1
       '@types/node':
-        specifier: ^20
+        specifier: ^20.19.35
         version: 20.19.35
       '@types/react':
-        specifier: ^19
+        specifier: ^19.2.14
         version: 19.2.14
       '@types/react-dom':
-        specifier: ^19
+        specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.14)
       oxfmt:
         specifier: ^0.36.0
@@ -70,10 +70,10 @@ importers:
         specifier: ^1.51.0
         version: 1.51.0
       tailwindcss:
-        specifier: ^4
+        specifier: ^4.2.1
         version: 4.2.1
       typescript:
-        specifier: ^5
+        specifier: ^5.9.3
         version: 5.9.3
       wrangler:
         specifier: ^4.71.0
@@ -2618,11 +2618,11 @@ packages:
   bowser@2.14.1:
     resolution: {integrity: sha512-tzPjzCxygAKWFOJP011oxFHs57HzIhOEracIgAePE4pqB3LikALKnSzUyU4MGs9/iCEUuHlAJTjTc5M+u7YEGg==}
 
-  brace-expansion@2.0.2:
-    resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
+  brace-expansion@2.1.0:
+    resolution: {integrity: sha512-TN1kCZAgdgweJhWWpgKYrQaMNHcDULHkWwQIspdtjV4Y5aurRdZpjAqn6yX3FPqTA9ngHCc4hJxMAMgGfve85w==}
 
-  brace-expansion@5.0.4:
-    resolution: {integrity: sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==}
+  brace-expansion@5.0.6:
+    resolution: {integrity: sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g==}
     engines: {node: 18 || 20 || >=22}
 
   braces@3.0.3:
@@ -7166,11 +7166,11 @@ snapshots:
 
   bowser@2.14.1: {}
 
-  brace-expansion@2.0.2:
+  brace-expansion@2.1.0:
     dependencies:
       balanced-match: 1.0.2
 
-  brace-expansion@5.0.4:
+  brace-expansion@5.0.6:
     dependencies:
       balanced-match: 4.0.4
 
@@ -7954,11 +7954,11 @@ snapshots:
 
   minimatch@10.2.4:
     dependencies:
-      brace-expansion: 5.0.4
+      brace-expansion: 5.0.6
 
   minimatch@8.0.7:
     dependencies:
-      brace-expansion: 2.0.2
+      brace-expansion: 2.1.0
 
   minimist@1.2.8: {}
 
